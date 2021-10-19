@@ -1,2 +1,2 @@
 # ROPE
-Robust Object PoseEstimation 
+Robust Object Pose Estimation 
