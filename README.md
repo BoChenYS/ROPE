@@ -3,10 +3,12 @@ This repo stores code used in the paper
 ## [Occlusion-Robust Object Pose Estimation with Holistic Representation](https://arxiv.org/pdf/2110.11636.pdf)
 
 ### Environment
-
+Our system environment is provided in environment.yaml for consideration.
 
 ### Datasets
+The Linemod (lm), Linemod-Occluded (lmo) and YCB-Video (ycbv) datasets can be downloaded from the [BOP](https://bop.felk.cvut.cz/datasets/) website. The paths to the datasets should then be specified in the cfg.yaml file. 
 
+For better initialisation, the pretrained hrnet backbone file can be downloaded from [here](https://github.com/leoxiaobin/deep-high-resolution-net.pytorch).
 
 ### Usage examples
 To train for the lm test set in distrubted mode
@@ -21,16 +23,16 @@ CUDA_VISIBLE_DEVICES=<which_gpu> python main_lmo.py --cfg cfg.yaml --obj ape --l
 
 To load trained model and test on the lmo dataset
 ````bash
-CUDA_VISIBLE_DEVICES=<which_gpu> python main_lmo.py --cfg cfg.yaml --obj ape --log_name <which_experiment_to_load> --resume --test-only 
+CUDA_VISIBLE_DEVICES=<which_gpu> python main_lmo.py --cfg cfg.yaml --obj cat --log_name <which_experiment_to_load> --resume --test-only 
 ````
 
 
-To train for the ycbv test set 
+To train for the ycbv test set for object 01
 ````bash
 python -m torch.distributed.launch --nproc_per_node=<num_gpus_to_use> --use_env main_ycbv.py --cfg cfg.yaml --obj 01 --log_name <name_this_experiment>
 ````
 
-To compute AUC for a ycbv test result
+To compute AUC for a ycbv test result for object 20
 ````bash
 python analysis.py --cfg cfg.yaml --log_name <which_experiment_to_load> --obj 20
 ````

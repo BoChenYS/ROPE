@@ -2,11 +2,11 @@ N_PTS: 11
 DEVICE: 'cuda'
 BATCH_SIZE: 3
 TEST_BATCH_SIZE: 1
-LM_DIR: '/home/bo/Data/lm'
-LMO_DIR: '/home/bo/Data/lmo'
-LM_SYNT_DIR: '/home/bo/Data/lm_synt'
-YCBV_DIR: '/home/bo/Data/ycbv'
-OUTPUT_DIR: '/home/bo/Outputs/prorope'
+LM_DIR: '<path_to_lm_folder>'
+LMO_DIR: '<path_to_lmo_folder>'
+LM_SYNT_DIR: '<path_to_lm_synthetic_folder>'
+YCBV_DIR: '<path_to_ycbv_folder>'
+OUTPUT_DIR: '<path_to_output_folder>'
 WORKERS: 4
 END_EPOCH: 200
 PRINT_FREQ: 100
@@ -19,7 +19,7 @@ LR_STEPS:
 
 MODEL:
   INIT_WEIGHTS: true
-  PRETRAINED: '/home/bo/Data/pretrained_hrnet/hrnet_w32-36af842e.pth'
+  PRETRAINED: '<path_to_pretrained_hrnet_backbone_file>'
   TARGET_TYPE: gaussian
   IMAGE_SIZE:
   - 640
