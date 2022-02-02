@@ -37,4 +37,13 @@ To compute AUC for a ycbv test result for object 20
 python analysis.py --cfg cfg.yaml --log_name <which_experiment_to_load> --obj 20
 ````
 
+### Cite this work
+````
+@inproceedings{chen2022occlusion,
+    Author = {Chen, Bo and Chin, Tat-Jun and Klimavicius, Marius},
+    Title = {Occlusion-Robust Object Pose Estimation with Holistic Representation},
+    Booktitle = {WACV},
+    Year = {2022}
+}
+````
 
