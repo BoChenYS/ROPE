@@ -2,6 +2,8 @@
 This repo stores code used in the paper
 ## [Occlusion-Robust Object Pose Estimation with Holistic Representation](https://openaccess.thecvf.com/content/WACV2022/papers/Chen_Occlusion-Robust_Object_Pose_Estimation_With_Holistic_Representation_WACV_2022_paper.pdf)
 
+![](ycbv_qua.jpg)
+
 ### Environment
 Our system environment is provided in environment.yaml for consideration.
 
